@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.04.1
+%define		kdeappsver	25.04.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kdesdk-thumbnailers
 Summary:	kdesdk thumbnailers
 Name:		ka6-%{kaname}
-Version:	25.04.1
+Version:	25.04.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	4a1d33feb1e5b0b966137a436028f07a
+# Source0-md5:	c41b1f389bd55f731bc310598e2d1f5f
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
