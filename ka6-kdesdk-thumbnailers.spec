@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.3
+%define		kdeappsver	25.12.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kdesdk-thumbnailers
 Summary:	kdesdk thumbnailers
 Name:		ka6-%{kaname}
-Version:	25.08.3
-Release:	2
+Version:	25.12.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	f0536b18c7acf0f9325c0b6cb48dfb33
+# Source0-md5:	6534012fb661d5351a7b96c9fc20f905
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -58,12 +58,9 @@ ctest --test-dir build
 rm -rf $RPM_BUILD_ROOT
 %ninja_install -C build
 
-%find_lang %{kaname} --all-name --with-kde
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{kaname}.lang
+%files
 %defattr(644,root,root,755)
 %{_libdir}/qt6/plugins/kf6/thumbcreator/pothumbnail.so
-%{_datadir}/config.kcfg/pocreatorsettings.kcfg
