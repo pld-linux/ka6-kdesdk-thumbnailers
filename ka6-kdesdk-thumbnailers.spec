@@ -36,6 +36,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Plugins for the thumbnailing system.
 
+%description -l pl.UTF-8
+Wtyczki dla systemu miniaturek.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
